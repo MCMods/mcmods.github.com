@@ -56,7 +56,8 @@ html, body {
 body {
 	min-height: 100%;
 	background: url(../img/bg-logo.png) no-repeat 50% 50%;
-	box-shadow: inset 0 0 500px #012;
+	box-shadow: inset 0 0 500px #123;
+	-moz-box-shadow: none; /* Sorry Firefox, but you're laggy */
 }
 h1 {
 	width: 550px;
@@ -92,11 +93,9 @@ h1 a:hover {
 	right: -40px;
 	z-index: 999;
 }
-.slime.flip {
-	-webkit-transform: scaleX(-1) scaleY(1);
-}
 .slime, .slime i {
 	display: block;
+	pointer-events: none;
 }
 .slime .body {
 	width: 80px;
@@ -117,16 +116,25 @@ h1 a:hover {
 .jump {
 	-webkit-animation: jump 1.5s infinite;
 	-moz-animation: jump 1.5s infinite;
+	-ms-animation: jump 1.5s infinite;
+	-o-animation: jump 1.5s infinite;
+	animation: jump 1.5s infinite;
 }
 
 .jiggle {
 	-webkit-animation: jiggle 1.5s infinite;
 	-moz-animation: jiggle 1.5s infinite;
+	-ms-animation: jiggle 1.5s infinite;
+	-o-animation: jiggle 1.5s infinite;
+	animation: jiggle 1.5s infinite;
 }
 
 .shadow {
 	-webkit-animation: fade 1.5s infinite;
 	-moz-animation: fade 1.5s infinite;
+	-ms-animation: fade 1.5s infinite;
+	-o-animation: fade 1.5s infinite;
+	animation: fade 1.5s infinite;
 }
 
 
@@ -148,6 +156,36 @@ h1 a:hover {
 	50% {
 		-moz-transform: translateY(0px);
 		-moz-animation-timing-function: ease-out;
+	}
+}
+@-ms-keyframes jump {
+	0%, 5%, 95%, 100% {
+		-ms-transform: translateY(-100px);
+		-ms-animation-timing-function: ease-in;
+	}
+	50% {
+		-ms-transform: translateY(0px);
+		-ms-animation-timing-function: ease-out;
+	}
+}
+@-o-keyframes jump {
+	0%, 5%, 95%, 100% {
+		-o-transform: translateY(-100px);
+		-o-animation-timing-function: ease-in;
+	}
+	50% {
+		-o-transform: translateY(0px);
+		-o-animation-timing-function: ease-out;
+	}
+}
+@keyframes jump {
+	0%, 5%, 95%, 100% {
+		transform: translateY(-100px);
+		animation-timing-function: ease-in;
+	}
+	50% {
+		transform: translateY(0px);
+		animation-timing-function: ease-out;
 	}
 }
 
@@ -173,6 +211,39 @@ h1 a:hover {
 		-moz-transform: scaleX(1.1) scaleY(0.9);
 	}
 }
+@-ms-keyframes jiggle {
+	30%, 90% {
+		-ms-transform: scaleX(1.0);
+	}
+	60% {
+		-ms-transform: scaleX(0.9) scaleY(1.1);
+	}
+	0%, 50%, 100% {
+		-ms-transform: scaleX(1.1) scaleY(0.9);
+	}
+}
+@-o-keyframes jiggle {
+	30%, 90% {
+		-o-transform: scaleX(1.0);
+	}
+	60% {
+		-o-transform: scaleX(0.9) scaleY(1.1);
+	}
+	0%, 50%, 100% {
+		-o-transform: scaleX(1.1) scaleY(0.9);
+	}
+}
+@keyframes jiggle {
+	30%, 90% {
+		transform: scaleX(1.0);
+	}
+	60% {
+		transform: scaleX(0.9) scaleY(1.1);
+	}
+	0%, 50%, 100% {
+		transform: scaleX(1.1) scaleY(0.9);
+	}
+}
 
 @-webkit-keyframes fade {
 	0%, 5%, 95%, 100% {
@@ -189,5 +260,73 @@ h1 a:hover {
 		opacity: .7;
 		-webkit-transform: scaleX(1.0) scaleY(1.0);
 		-webkit-animation-timing-function: ease-out;
+	}
+}
+@-moz-keyframes fade {
+	0%, 5%, 95%, 100% {
+		opacity: .1;
+		-moz-transform: scaleX(0.7) scaleY(0.7);
+		-moz-animation-timing-function: ease-in;
+	}
+	40%, 60% {
+		opacity: .3;
+		-moz-transform: scaleX(0.8) scaleY(.8);
+		-moz-animation-timing-function: ease-out;
+	}
+	50% {
+		opacity: .7;
+		-moz-transform: scaleX(1.0) scaleY(1.0);
+		-moz-animation-timing-function: ease-out;
+	}
+}
+@-ms-keyframes fade {
+	0%, 5%, 95%, 100% {
+		opacity: .1;
+		-ms-transform: scaleX(0.7) scaleY(0.7);
+		-ms-animation-timing-function: ease-in;
+	}
+	40%, 60% {
+		opacity: .3;
+		-ms-transform: scaleX(0.8) scaleY(.8);
+		-ms-animation-timing-function: ease-out;
+	}
+	50% {
+		opacity: .7;
+		-ms-transform: scaleX(1.0) scaleY(1.0);
+		-ms-animation-timing-function: ease-out;
+	}
+}
+@-o-keyframes fade {
+	0%, 5%, 95%, 100% {
+		opacity: .1;
+		-o-transform: scaleX(0.7) scaleY(0.7);
+		-o-animation-timing-function: ease-in;
+	}
+	40%, 60% {
+		opacity: .3;
+		-o-transform: scaleX(0.8) scaleY(.8);
+		-o-animation-timing-function: ease-out;
+	}
+	50% {
+		opacity: .7;
+		-o-transform: scaleX(1.0) scaleY(1.0);
+		-o-animation-timing-function: ease-out;
+	}
+}
+@keyframes fade {
+	0%, 5%, 95%, 100% {
+		opacity: .1;
+		transform: scaleX(0.7) scaleY(0.7);
+		animation-timing-function: ease-in;
+	}
+	40%, 60% {
+		opacity: .3;
+		transform: scaleX(0.8) scaleY(.8);
+		animation-timing-function: ease-out;
+	}
+	50% {
+		opacity: .7;
+		transform: scaleX(1.0) scaleY(1.0);
+		animation-timing-function: ease-out;
 	}
 }
