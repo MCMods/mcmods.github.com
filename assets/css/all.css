@@ -1,0 +1,193 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+html, body {
+	height: 100%;
+	background: #1E3C58 url(../img/bg.jpg);
+}
+body {
+	min-height: 100%;
+	background: url(../img/bg-logo.png) no-repeat 50% 50%;
+	box-shadow: inset 0 0 500px #012;
+}
+h1 {
+	width: 550px;
+	height: 150px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	margin-left: -290px;
+	margin-top: -90px;
+}
+h1 a {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	background: url(../img/logo.png) no-repeat 50% 0;
+
+	white-space: nowrap;
+	text-indent: 100%;
+	overflow: hidden;
+}
+h1 a:hover {
+	opacity: .8;
+}
+
+
+
+.slime {
+	position: absolute;
+	bottom: 0;
+	right: -40px;
+	z-index: 999;
+}
+.slime.flip {
+	-webkit-transform: scaleX(-1) scaleY(1);
+}
+.slime, .slime i {
+	display: block;
+}
+.slime .body {
+	width: 80px;
+	height: 80px;
+	background: url(../img/slime.png) no-repeat;
+}
+.slime .shadow {
+	width: 80px;
+	height: 80px;
+	background: url(../img/slime-shadow.png) no-repeat;
+	position: absolute;
+	top: -2px;
+	left: 0;
+	opacity: 0;
+}
+
+
+.jump {
+	-webkit-animation: jump 1.5s infinite;
+	-moz-animation: jump 1.5s infinite;
+}
+
+.jiggle {
+	-webkit-animation: jiggle 1.5s infinite;
+	-moz-animation: jiggle 1.5s infinite;
+}
+
+.shadow {
+	-webkit-animation: fade 1.5s infinite;
+	-moz-animation: fade 1.5s infinite;
+}
+
+
+@-webkit-keyframes jump {
+	0%, 5%, 95%, 100% {
+		-webkit-transform: translateY(-100px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	50% {
+		-webkit-transform: translateY(0px);
+		-webkit-animation-timing-function: ease-out;
+	}
+}
+@-moz-keyframes jump {
+	0%, 5%, 95%, 100% {
+		-moz-transform: translateY(-100px);
+		-moz-animation-timing-function: ease-in;
+	}
+	50% {
+		-moz-transform: translateY(0px);
+		-moz-animation-timing-function: ease-out;
+	}
+}
+
+@-webkit-keyframes jiggle {
+	30% {
+		-webkit-transform: scaleX(1.0);
+	}
+	60% {
+		-webkit-transform: scaleX(0.9) scaleY(1.1);
+	}
+	5%, 45%, 50%, 95% {
+		-webkit-transform: scaleX(1.1) scaleY(0.9);
+	}
+}
+@-moz-keyframes jiggle {
+	30%, 90% {
+		-moz-transform: scaleX(1.0);
+	}
+	60% {
+		-moz-transform: scaleX(0.9) scaleY(1.1);
+	}
+	0%, 50%, 100% {
+		-moz-transform: scaleX(1.1) scaleY(0.9);
+	}
+}
+
+@-webkit-keyframes fade {
+	0%, 5%, 95%, 100% {
+		opacity: .1;
+		-webkit-transform: scaleX(0.7) scaleY(0.7);
+		-webkit-animation-timing-function: ease-in;
+	}
+	40%, 60% {
+		opacity: .3;
+		-webkit-transform: scaleX(0.8) scaleY(.8);
+		-webkit-animation-timing-function: ease-out;
+	}
+	50% {
+		opacity: .7;
+		-webkit-transform: scaleX(1.0) scaleY(1.0);
+		-webkit-animation-timing-function: ease-out;
+	}
+}
