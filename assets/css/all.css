@@ -114,27 +114,27 @@ h1 a:hover {
 
 
 .jump {
-	-webkit-animation: jump 1.5s infinite;
-	-moz-animation: jump 1.5s infinite;
-	-ms-animation: jump 1.5s infinite;
-	-o-animation: jump 1.5s infinite;
-	animation: jump 1.5s infinite;
+	-webkit-animation: jump 1.09s infinite; /* we loves 110bpm */
+	-moz-animation: jump 1.09s infinite;
+	-ms-animation: jump 1.09s infinite;
+	-o-animation: jump 1.09s infinite;
+	animation: jump 1.09s infinite;
 }
 
 .jiggle {
-	-webkit-animation: jiggle 1.5s infinite;
-	-moz-animation: jiggle 1.5s infinite;
-	-ms-animation: jiggle 1.5s infinite;
-	-o-animation: jiggle 1.5s infinite;
-	animation: jiggle 1.5s infinite;
+	-webkit-animation: jiggle 1.09s infinite;
+	-moz-animation: jiggle 1.09s infinite;
+	-ms-animation: jiggle 1.09s infinite;
+	-o-animation: jiggle 1.09s infinite;
+	animation: jiggle 1.09s infinite;
 }
 
 .shadow {
-	-webkit-animation: fade 1.5s infinite;
-	-moz-animation: fade 1.5s infinite;
-	-ms-animation: fade 1.5s infinite;
-	-o-animation: fade 1.5s infinite;
-	animation: fade 1.5s infinite;
+	-webkit-animation: fade 1.09s infinite;
+	-moz-animation: fade 1.09s infinite;
+	-ms-animation: fade 1.09s infinite;
+	-o-animation: fade 1.09s infinite;
+	animation: fade 1.09s infinite;
 }
 
 
